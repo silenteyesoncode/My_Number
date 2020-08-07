@@ -7,6 +7,7 @@ import Header from './components/Header';
 import StartGameScreen from './screens/StartGameScreen';
 import GameScreen from './screens/GameScreen';
 import GameOverScreen from './screens/GameOverScreen';
+import colors from './constants/colors';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -69,6 +70,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#C4C3C4',
   }
 });
