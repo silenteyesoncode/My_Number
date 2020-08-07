@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Button, Image } from 'react-native';
 
 import BodyText from '../components/BodyText';
 import TitleText from '../components/TitleText';
+import MainButton from '../components/MainButton';
 import Colors from '../constants/colors';
 
 const GameOverScreen = props => {
@@ -12,6 +13,10 @@ const GameOverScreen = props => {
       <View style={styles.imageContainer}>
         <Image
           source={require('../assets/success.png')}
+          // source={{
+          //   uri:
+          //     'https://cdn.pixabay.com/photo/2016/05/05/23/52/mountain-summit-1375015_960_720.jpg'
+          // }}
           style={styles.image}
           resizeMode="cover"
         />
@@ -25,7 +30,7 @@ const GameOverScreen = props => {
         </BodyText>
       </View>
 
-      <Button title="NEW GAME" onPress={props.onRestart} />
+      <MainButton onPress={props.onRestart}>NEW GAME</MainButton>
     </View>
   );
 };
@@ -59,7 +64,7 @@ const styles = StyleSheet.create({
   },
   highlight: {
     color: Colors.primary,
-    fontFamily: 'open-sans-bold',
+    fontFamily: 'open-sans-bold'
   }
 });
 
